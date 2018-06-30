@@ -15,23 +15,20 @@ public class Vigenere {
         int j = 0; // Passwort-Index
 
         for(int i=0; i < text.length(); i++) { // i = Text-Index
-            if (j >= password.length()){
+            if (j >= password.length())
                 j = 0;
-            }
             char p = password.charAt(j);
             char c = text.charAt(i);
 
             result[i] = (char)(c+p-65);
 
-            if(result[i] > 90) {
+            if(result[i] > 90)
                 result[i] -= 26;
-            }
 
             j++;
         }
 
         cipheredText = String.valueOf(result);
-
         return cipheredText;
     }
 
@@ -49,26 +46,24 @@ public class Vigenere {
         int j = 0; // Passwort-Index
 
         for(int i=0; i < text.length(); i++) { // i = Text-Index
-            if (j >= password.length()){
+            if (j >= password.length())
                 j = 0;
-            }
 
             char p = password.charAt(j);
             char s = text.charAt(i);
 
             result[i] = (char)(s-p+97);
 
-            if(result[i] < 97) {
+            if(result[i] < 97)
                 result[i] += 26;
-            }
 
             j++;
         }
 
         decipheredText = String.valueOf(result);
-
         return decipheredText;
     }
+
 
     public int getVigenereShift(char keyChar) {
 

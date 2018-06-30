@@ -1,3 +1,6 @@
+import java.lang.Math;
+import java.math.BigInteger;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -33,16 +36,8 @@ public class Main {
 		}
 		*/
 
-        //textTools.frequencyAnalysis(splittedText[7]);
+        //System.out.println(kasiskiTest.euklidAlgorithmOld(27, 77));
+        System.out.println(Math.pow(283,257));
 
-        //System.out.println(kasiskiTest.estimateKeyLength(secret));
-
-		/*
-		String test = caesar.shiftText("LYUMATQONMSGQQQEQEMFUMNUOUMZGQZPEQDMQFVQXRAXINZZQQUMQTTFQTQQQYEIINUXTFQDJPQUTYTFQQZDDUZFPQZETUQPUIAMTTMTUTOFQUXLDGIDXDXZXQZHWGLQMQGZZQPADU", vigenere.getVigenereShift('M'));
-		System.out.println(test);
-		*/
-
-        textTools.frequencyAnalaysisTuple(secret, 2);
-        //textTools.frequencyAnalysis(secret);
     }
 }

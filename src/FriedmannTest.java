@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 public class FriedmannTest implements VigenereTest {
 
-    private double iRan = 0.0385;
-    private double iGer = 0.0762;
+    private static double iRan = 0.0385;
+    private static double iGer = 0.0762;
 
     TextTools textTools = new TextTools();
 
@@ -23,15 +23,15 @@ public class FriedmannTest implements VigenereTest {
         return iChiffre;
     }
 
-    public int estimateKeyLength(String text) {
+    public int estimateKeyLength(String chiffre) {
 
-        int keyLength = 0;
-        double iChi = IndexOfCoincidence(text);
-        int n = text.length(); // Anzahl Zeichen des Textes
+        int keyLength;
+        double iChi = IndexOfCoincidence(chiffre);
+        int n = chiffre.length(); // Anzahl Zeichen des Textes
 
         keyLength = (int)((n * (iGer - iRan)) / (iChi*(n-1) + iGer - n * iRan));
 
-        return (int)keyLength;
+        return keyLength;
     }
 
     public String[] splitText(String text, int keyLength) {

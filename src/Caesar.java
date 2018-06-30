@@ -10,9 +10,8 @@ public class Caesar {
 
             newValue = (char) (text.charAt(i) - shiftValue);
 
-            if(newValue < 65) {
+            if(newValue < 65)
                 newValue = (char) (newValue + 26);
-            }
             resultArray[i] = newValue;
         }
 

@@ -1,4 +1,4 @@
 public interface VigenereTest {
 
-    public int estimateKeyLength(String chiffre);
+    int estimateKeyLength(String chiffre);
 }

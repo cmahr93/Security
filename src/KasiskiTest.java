@@ -28,7 +28,6 @@ public class KasiskiTest implements VigenereTest {
                 keyLength = euklidAlgorithmOld(keyLength, distances[k]);
             }
         }
-
         return keyLength;
     }
 
@@ -36,20 +35,17 @@ public class KasiskiTest implements VigenereTest {
     public int euklidAlgorithmOld(int a, int b) {
         int result = 0;
 
-        if(a==0) {
+        if(a==0)
             result = b;
-        } else {
+        else {
             while(b != 0) {
-                if(a > b) {
+                if(a > b)
                     a = a-b;
-                } else {
+                else
                     b = b - a;
-                }
             }
-
             result = a;
         }
-
         return result;
     }
 }

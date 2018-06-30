@@ -1,3 +1,4 @@
+import javax.lang.model.element.Element;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,11 +33,17 @@ public class TextTools {
 
     public int[] frequencyAnalysis(String text) {
 
-        //System.out.println("Rohtext: " + text);
-
         text = this.formatText(text, true);
-
+        //char charText[] = text;
         int result[] = new int[26];
+
+        /*
+        for(char c : charText){
+            if(charText[c] >= 65 && charText[c] <= 90){
+                result[(int)(charText[c]) - 65] += 1;
+            }
+        }
+        */
 
         for(int i = 0; i < text.length(); i++) {
             if(text.charAt(i) >= 65 && text.charAt(i) <= 90) {
